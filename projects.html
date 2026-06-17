@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Myke Barthelemy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-navigation">
+        <ul class="nav-links">
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="skills.html">Mes compétences</a></li>
+            <li><a href="projects.html" class="active">Mes Projets</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="#more">Plus</a></li>
+        </ul>
+        <a href="assets/cv_myke_barthelemy.pdf" target="_blank" class="button-download">TÉLÉCHARGER CV</a>
+    </nav>
+
+    <main class="projects-container">
+        <header class="section-header">
+            <div class="banner-container">
+                <img src="assets/banner.jpg" alt="Mes Projets Banner" class="banner-img">
+                <div class="banner-overlay">
+                    <h1>Mes Projets</h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-grid">
+            <article class="project-card" onclick="openModal('modal-reunion')">
+                <h2>Mise en scène d'une réunion en Anglais</h2>
+                <img src="assets/reunion.png" alt="Mise en scène d'une réunion en Anglais">
+            </article>
+
+            <article class="project-card" onclick="openModal('modal-thales')">
+                <h2>Prise de photo automatique chez Thalès</h2>
+                <img src="assets/thales.jpg" alt="Prise de photo automatique chez Thalès">
+            </article>
+        </section>
+    </main>
+
+    <div id="modal-reunion" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-reunion')">&times;</span>
+            <img src="assets/reunion.png" alt="Mise en scène d'une réunion en Anglais" class="modal-img">
+            <h2>Mise en scène d'une réunion en Anglais</h2>
+            <div class="modal-text">
+                <p><strong>Contexte :</strong> En projet j’ai dû participer à une réunion fictive impliquant des acteurs du monde de la cybersécurité.</p>
+                <p><strong>Objectif :</strong> Mettre en scène et tenir une réunion en anglais sur le thème de la cybersécurité.</p>
+                <p><strong>Mon avis personnel :</strong> C'est un projet qui m'a particulièrement plu car il agissait comme une fenêtre sur notre avenir.</p>
+                
+                <div style="margin-top: 40px; text-align: center;">
+                    <a href="assets/reunion.pdf" target="_blank" class="button-primary">Plus d'informations</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-thales" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-thales')">&times;</span>
+            <img src="assets/thales.jpg" alt="Prise de photo automatique chez Thalès" class="modal-img">
+            <h2>Prise de photo automatique chez Thalès</h2>
+            <div class="modal-text">
+                <p><strong>Contexte :</strong> C'est un projet intégratif, incluant toutes les compétences vues au cours de l'année.</p>
+                <p><strong>Objectif :</strong> Mettre en place un système de prise de photo automatique de banc avionique chez Thalès à l'aide d'un Raspberry Pi.</p>
+                <p><strong>Mon avis personnel :</strong> C'est un projet qui m'a particulièrement plu car il nous a montré ce que l'on peut réellement faire grâce aux différentes compétences acquises lors de cette année.</p>
+                
+                <div style="margin-top: 40px; text-align: center;">
+                    <a href="assets/Thales01_SAE23_24_rapport.pdf" target="_blank" class="button-primary">Plus d'informations</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
