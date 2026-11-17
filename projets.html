@@ -31,87 +31,81 @@
       </nav>
     </div>
   </header>
+
   <main id="contenu">
-    <section class="container page">
+    <section class="container page projects-page">
       <header class="page-heading">
         <p class="eyebrow">Projets</p>
         <h1 class="heading page-title">Mes <em>réalisations</em></h1>
-        <p class="placeholder-copy">[Présente ta sélection de projets universitaires, personnels ou collectifs.]</p>
       </header>
-      <div class="filters" role="group" aria-label="Filtrer les projets" hidden>
-        <button class="filter" type="button" data-filter="tous" aria-pressed="true">Tous</button>
-        <button class="filter" type="button" data-filter="reseaux" aria-pressed="false">Réseaux &amp; télécoms</button>
-        <button class="filter" type="button" data-filter="cyber" aria-pressed="false">Cybersécurité</button>
-        <button class="filter" type="button" data-filter="dev" aria-pressed="false">Développement</button>
-      </div>
+
+      <nav class="project-categories" aria-label="Catégories de projets">
+        <button class="filter" type="button" data-filter="reseaux" aria-pressed="false">Réseaux</button>
+        <button class="filter" type="button" data-filter="telecommunications" aria-pressed="false">Télécommunications</button>
+        <button class="filter" type="button" data-filter="cybersecurite" aria-pressed="false">Cybersécurité</button>
+        <button class="filter" type="button" data-filter="developpement" aria-pressed="false">Développement</button>
+        <button class="filter" type="button" data-filter="autres" aria-pressed="true">Autres</button>
+      </nav>
+
       <div class="project-grid">
-        <article class="project" data-category="reseaux">
-          <div class="media-placeholder media-network">
-            <span class="portrait-slot">Ajouter une image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-type">Réseaux &amp; télécoms</span>
-            <h2>[Titre du projet]</h2>
-            <p class="placeholder-copy">[Résume un projet réseau en une ou deux phrases.]</p>
-            <details>
-              <summary>Voir la fiche</summary>
-              <dl>
-                <dt>Contexte</dt>
-                <dd>[En cours, en autonomie ou en équipe.]</dd>
-                <dt>Ma contribution</dt>
-                <dd>[Décris ce que tu as réalisé et avec quels outils.]</dd>
-                <dt>Résultat</dt>
-                <dd>[Ajoute un résultat, un livrable ou un lien.]</dd>
-              </dl>
-            </details>
-          </div>
-        </article>
-        <article class="project" data-category="cyber">
-          <div class="media-placeholder media-security">
-            <span class="portrait-slot">Ajouter une image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-type">Cybersécurité</span>
-            <h2>[Titre du projet]</h2>
-            <p class="placeholder-copy">[Résume un projet cyber en une ou deux phrases.]</p>
-            <details>
-              <summary>Voir la fiche</summary>
-              <dl>
-                <dt>Contexte</dt>
-                <dd>[En cours, en autonomie ou en équipe.]</dd>
-                <dt>Ma contribution</dt>
-                <dd>[Décris ce que tu as réalisé et avec quels outils.]</dd>
-                <dt>Résultat</dt>
-                <dd>[Ajoute un résultat, un livrable ou un lien.]</dd>
-              </dl>
-            </details>
-          </div>
-        </article>
-        <article class="project" data-category="dev">
-          <div class="media-placeholder media-development">
-            <span class="portrait-slot">Ajouter une image</span>
-          </div>
-          <div class="project-body">
-            <span class="project-type">Développement</span>
-            <h2>[Titre du projet]</h2>
-            <p class="placeholder-copy">[Résume un projet de développement en une ou deux phrases.]</p>
-            <details>
-              <summary>Voir la fiche</summary>
-              <dl>
-                <dt>Contexte</dt>
-                <dd>[En cours, en autonomie ou en équipe.]</dd>
-                <dt>Ma contribution</dt>
-                <dd>[Décris ce que tu as réalisé et avec quels outils.]</dd>
-                <dt>Résultat</dt>
-                <dd>[Ajoute un résultat, un livrable ou un lien.]</dd>
-              </dl>
-            </details>
-          </div>
-        </article>
+        <button class="project project-trigger" type="button" data-project-open="thales" data-category="autres" aria-haspopup="dialog" aria-controls="thales-modal">
+          <span class="project-visual project-thales-visual" aria-hidden="true">
+            <span class="project-visual-orbit"></span>
+            <span class="project-visual-label">Thales Alenia Space</span>
+            <span class="project-visual-caption">Projet intégratif</span>
+          </span>
+          <span class="project-body">
+            <span class="project-type">Autres</span>
+            <span class="project-card-title">Prise de photo automatique chez Thales</span>
+            <span class="project-card-description">Mettre en place un système de prise de photo automatique de banc avionique chez Thales à l'aide d'un Raspberry Pi.</span>
+            <span class="project-card-link">Découvrir le projet <span class="arrow" aria-hidden="true">↗</span></span>
+          </span>
+        </button>
       </div>
-      <p class="placeholder-copy section-link" data-empty-projects role="status" hidden>Aucun projet dans cette catégorie.</p>
+      <p class="project-empty" data-empty-projects role="status" hidden>Aucun projet dans cette catégorie.</p>
     </section>
   </main>
+
+  <dialog class="project-modal" id="thales-modal" aria-labelledby="thales-title">
+    <div class="modal-panel">
+      <button class="modal-close" type="button" aria-label="Fermer la fenêtre">×</button>
+      <div class="modal-heading">
+        <p class="eyebrow">Autres · Projet intégratif</p>
+        <h2 class="heading" id="thales-title">Prise de photo automatique chez Thales</h2>
+      </div>
+      <div class="modal-content">
+        <section class="modal-section">
+          <h3>Contexte</h3>
+          <p>C'est un projet intégratif, incluant toute les compétences vu au cours de l'année</p>
+        </section>
+        <section class="modal-section">
+          <h3>Objectif</h3>
+          <p>Mettre en place un système de prise de photo automatique de banc avionique chez Thales à l'aide d'un Raspberry Pi.</p>
+        </section>
+        <section class="modal-section">
+          <h3>Technologies et outils utilisés</h3>
+          <p class="modal-placeholder">[À compléter]</p>
+        </section>
+        <section class="modal-section">
+          <h3>Travail personnel réalisé</h3>
+          <p class="modal-placeholder">[À compléter]</p>
+        </section>
+        <section class="modal-section">
+          <h3>Résultats obtenus</h3>
+          <p class="modal-placeholder">[À compléter]</p>
+        </section>
+        <section class="modal-section">
+          <h3>Mon avis personnel</h3>
+          <p>C'est un projet qui m'a particulièrement plus car il nous a montré ce que l'on peut réellement faire grâce aux différentes compétences acquise lors de cette année.</p>
+        </section>
+      </div>
+      <div class="modal-actions">
+        <a class="button button-primary proof-link" href="assets/" aria-disabled="true" tabindex="-1">Consulter la preuve <span aria-hidden="true">↗</span></a>
+        <p class="proof-note">Preuve à ajouter dans le dossier assets.</p>
+      </div>
+    </div>
+  </dialog>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2026 Myke Barthelemy</p>
