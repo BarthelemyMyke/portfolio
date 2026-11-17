@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Myke Barthelemy, étudiant en deuxième année de BUT Réseaux et Télécommunications.">
+  <meta name="theme-color" content="#09211b">
+  <title>Projets · Myke Barthelemy</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">MB</span>
+        <span class="brand-text">Myke Barthelemy<small>Portfolio</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span> Menu
+      </button>
+      <nav id="navigation" class="navigation" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="projets.html" aria-current="page">Projets</a>
+        <a href="competences.html">Compétences</a>
+        <a href="experiences.html">Expériences</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="container page">
+      <header class="page-heading">
+        <p class="eyebrow">Projets</p>
+        <h1 class="heading page-title">Mes <em>réalisations</em></h1>
+        <p class="placeholder-copy">[Présente ta sélection de projets universitaires, personnels ou collectifs.]</p>
+      </header>
+      <div class="filters" role="group" aria-label="Filtrer les projets" hidden>
+        <button class="filter" type="button" data-filter="tous" aria-pressed="true">Tous</button>
+        <button class="filter" type="button" data-filter="reseaux" aria-pressed="false">Réseaux &amp; télécoms</button>
+        <button class="filter" type="button" data-filter="cyber" aria-pressed="false">Cybersécurité</button>
+        <button class="filter" type="button" data-filter="dev" aria-pressed="false">Développement</button>
+      </div>
+      <div class="project-grid">
+        <article class="project" data-category="reseaux">
+          <div class="media-placeholder media-network">
+            <span class="portrait-slot">Ajouter une image</span>
+          </div>
+          <div class="project-body">
+            <span class="project-type">Réseaux &amp; télécoms</span>
+            <h2>[Titre du projet]</h2>
+            <p class="placeholder-copy">[Résume un projet réseau en une ou deux phrases.]</p>
+            <details>
+              <summary>Voir la fiche</summary>
+              <dl>
+                <dt>Contexte</dt>
+                <dd>[En cours, en autonomie ou en équipe.]</dd>
+                <dt>Ma contribution</dt>
+                <dd>[Décris ce que tu as réalisé et avec quels outils.]</dd>
+                <dt>Résultat</dt>
+                <dd>[Ajoute un résultat, un livrable ou un lien.]</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+        <article class="project" data-category="cyber">
+          <div class="media-placeholder media-security">
+            <span class="portrait-slot">Ajouter une image</span>
+          </div>
+          <div class="project-body">
+            <span class="project-type">Cybersécurité</span>
+            <h2>[Titre du projet]</h2>
+            <p class="placeholder-copy">[Résume un projet cyber en une ou deux phrases.]</p>
+            <details>
+              <summary>Voir la fiche</summary>
+              <dl>
+                <dt>Contexte</dt>
+                <dd>[En cours, en autonomie ou en équipe.]</dd>
+                <dt>Ma contribution</dt>
+                <dd>[Décris ce que tu as réalisé et avec quels outils.]</dd>
+                <dt>Résultat</dt>
+                <dd>[Ajoute un résultat, un livrable ou un lien.]</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+        <article class="project" data-category="dev">
+          <div class="media-placeholder media-development">
+            <span class="portrait-slot">Ajouter une image</span>
+          </div>
+          <div class="project-body">
+            <span class="project-type">Développement</span>
+            <h2>[Titre du projet]</h2>
+            <p class="placeholder-copy">[Résume un projet de développement en une ou deux phrases.]</p>
+            <details>
+              <summary>Voir la fiche</summary>
+              <dl>
+                <dt>Contexte</dt>
+                <dd>[En cours, en autonomie ou en équipe.]</dd>
+                <dt>Ma contribution</dt>
+                <dd>[Décris ce que tu as réalisé et avec quels outils.]</dd>
+                <dt>Résultat</dt>
+                <dd>[Ajoute un résultat, un livrable ou un lien.]</dd>
+              </dl>
+            </details>
+          </div>
+        </article>
+      </div>
+      <p class="placeholder-copy section-link" data-empty-projects role="status" hidden>Aucun projet dans cette catégorie.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Myke Barthelemy</p>
+      <div class="footer-links">
+        <a href="assets/CV_Barthelemy_Myke.pdf" download="CV_Barthelemy_Myke.pdf">Télécharger mon CV ↓</a>
+        <a href="https://www.linkedin.com/in/myke-barthelemy-910b013b7" target="_blank" rel="noopener noreferrer">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="contact.html">Me contacter <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
