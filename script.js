@@ -22,24 +22,41 @@ if (menuButton && navigation) {
   });
 }
 
-const projectFilters = document.querySelector(".filters");
-
+/* Filtres des projets : les cinq catégories sont indépendantes. */
+const projectFilters = document.querySelector(".project-categories");
 if (projectFilters) {
   const filters = [...projectFilters.querySelectorAll("[data-filter]")];
   const projects = [...document.querySelectorAll(".project[data-category]")];
   const emptyMessage = document.querySelector("[data-empty-projects]");
-  projectFilters.hidden = false;
 
-  for (const filter of filters) {
-    filter.addEventListener("click", () => {
-      const category = filter.dataset.filter;
-      for (const button of filters) {
-        button.setAttribute("aria-pressed", String(button === filter));
-      }
-      for (const project of projects) {
-        project.hidden = category !== "tous" && project.dataset.category !== category;
-      }
-      emptyMessage.hidden = projects.some((project) => !project.hidden);
+  function filterProjects(category) {
+    filters.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.filter === category));
     });
+    projects.forEach((project) => {
+      project.hidden = project.dataset.category !== category;
+    });
+    if (emptyMessage) {
+      emptyMessage.hidden = projects.some((project) => !project.hidden);
+    }
   }
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => filterProjects(button.dataset.filter));
+  });
+  filterProjects("autres");
+}
+
+/* Fenêtres modales natives : Échap est géré par le navigateur. */
+const projectModal = document.querySelector("#thales-modal");
+if (projectModal) {
+  const openButton = document.querySelector('[data-project-open="thales"]');
+  const closeButton = projectModal.querySelector(".modal-close");
+
+  openButton?.addEventListener("click", () => projectModal.showModal());
+  closeButton?.addEventListener("click", () => projectModal.close());
+
+  projectModal.addEventListener("click", (event) => {
+    if (event.target === projectModal) projectModal.close();
+  });
 }
