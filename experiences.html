@@ -32,36 +32,58 @@
     </div>
   </header>
   <main id="contenu">
-    <section class="container page">
-      <header class="page-heading">
-        <p class="eyebrow">Expériences</p>
-        <h1 class="heading page-title">Mon <em>parcours</em></h1>
-        <p class="placeholder-copy">[Présente les étapes de ta formation et les expériences que tu veux valoriser.]</p>
+    <section class="container page history-page" aria-labelledby="history-title">
+      <header class="page-heading history-heading">
+        <p class="eyebrow">Mon parcours</p>
+        <h1 class="heading page-title" id="history-title">Mon <em>histoire.</em></h1>
       </header>
-      <ol class="timeline">
-        <li class="timeline-item">
-          <p class="timeline-date">[Dates du BUT]</p>
-          <div class="timeline-content">
-            <h2 class="section-title">BUT Réseaux &amp; Télécommunications</h2>
-            <p>Deuxième année · IUT de Nice Côte d'Azur (Sophia Antipolis - Valbonne)</p>
-            <p class="placeholder-copy">[Indique les enseignements ou projets qui t’ont le plus marqué.]</p>
-          </div>
+
+      <ol class="history-path" aria-label="Les trois étapes de mon parcours">
+        <li class="history-step">
+          <figure class="history-figure">
+            <div class="history-image-wrap">
+              <img src="https://pbs.twimg.com/profile_images/947030930723614720/8N43Zg9i_400x400.jpg" alt="Emblème du collège de l'Éganaude, à Biot" loading="lazy">
+              <span class="history-number" aria-hidden="true">01</span>
+            </div>
+            <figcaption class="history-label">
+              <h2>Collège de l'Éganaude</h2>
+              <p>Biot</p>
+            </figcaption>
+          </figure>
         </li>
-        <li class="timeline-item">
-          <p class="timeline-date">[Dates]</p>
-          <div class="timeline-content">
-            <h2 class="section-title">[Stage, emploi ou projet tuteuré]</h2>
-            <p>[Structure et lieu]</p>
-            <p class="placeholder-copy">[Explique la mission, tes responsabilités et ce que tu en as tiré.]</p>
-          </div>
+        <li class="history-connector" aria-hidden="true">
+          <svg viewBox="0 0 88 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 29L35 1L86 60L35 119L7 91L36 60L7 29Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          </svg>
         </li>
-        <li class="timeline-item">
-          <p class="timeline-date">[Dates]</p>
-          <div class="timeline-content">
-            <h2 class="section-title">[Formation ou expérience précédente]</h2>
-            <p>[Établissement, entreprise ou association]</p>
-            <p class="placeholder-copy">[Ajoute les informations pertinentes pour ton parcours.]</p>
-          </div>
+        <li class="history-step">
+          <figure class="history-figure">
+            <div class="history-image-wrap">
+              <img src="https://static.wixstatic.com/media/1f1d45_8df3ab6d7abe42cd8c4a8e47d146d1fa~mv2.jpg/v1/fill/w_971,h_669,al_c,q_85/Lyc%C3%A9e_Valbonne.jpg" alt="Vue aérienne du lycée Simone Veil à Valbonne" loading="lazy">
+              <span class="history-number" aria-hidden="true">02</span>
+            </div>
+            <figcaption class="history-label">
+              <h2>Lycée Simone Veil</h2>
+              <p>Valbonne</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="history-connector" aria-hidden="true">
+          <svg viewBox="0 0 88 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 29L35 1L86 60L35 119L7 91L36 60L7 29Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          </svg>
+        </li>
+        <li class="history-step">
+          <figure class="history-figure">
+            <div class="history-image-wrap">
+              <img src="https://univ-cotedazur.fr/medias/photo/sophidef_1636396583574-gif" alt="Bâtiment du campus SophiaTech de l'Université Côte d'Azur" loading="lazy">
+              <span class="history-number" aria-hidden="true">03</span>
+            </div>
+            <figcaption class="history-label">
+              <h2>BUT Réseaux &amp; Télécommunications</h2>
+              <p>Deuxième année · Sophia Antipolis</p>
+            </figcaption>
+          </figure>
         </li>
       </ol>
     </section>
