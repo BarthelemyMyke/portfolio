@@ -438,3 +438,13 @@ a:hover .arrow, button:hover .arrow { transform: translate(2px, -2px); }
 @media (prefers-reduced-motion: reduce) {
   .history-image-wrap img { transition: none; }
 }
+
+/* Page Compétences temporairement en préparation */
+.competences-coming-soon {
+  display: grid;
+  place-items: center;
+  min-height: min(65vh, 560px);
+  text-align: center;
+}
+.competences-coming-soon .page-heading { margin: 0; }
+.competences-coming-soon .page-title { max-width: 850px; font-size: clamp(2.9rem, 7vw, 6.2rem); }
