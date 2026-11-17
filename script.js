@@ -47,16 +47,13 @@ if (projectFilters) {
   filterProjects("tous");
 }
 
-/* Fenêtres modales natives : Échap est géré par le navigateur. */
-const projectModal = document.querySelector("#thales-modal");
-if (projectModal) {
-  const openButton = document.querySelector('[data-project-open="thales"]');
-  const closeButton = projectModal.querySelector(".modal-close");
-
-  openButton?.addEventListener("click", () => projectModal.showModal());
-  closeButton?.addEventListener("click", () => projectModal.close());
-
-  projectModal.addEventListener("click", (event) => {
-    if (event.target === projectModal) projectModal.close();
+/* Chaque carte ouvre sa fenêtre modale. Échap est géré nativement. */
+document.querySelectorAll("[data-project-open]").forEach((trigger) => {
+  const modal = document.getElementById(trigger.getAttribute("aria-controls"));
+  if (!modal || typeof modal.showModal !== "function") return;
+  trigger.addEventListener("click", () => modal.showModal());
+  modal.querySelector(".modal-close")?.addEventListener("click", () => modal.close());
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) modal.close();
   });
-}
+});
