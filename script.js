@@ -44,7 +44,7 @@ if (projectFilters) {
   filters.forEach((button) => {
     button.addEventListener("click", () => filterProjects(button.dataset.filter));
   });
-  filterProjects("autres");
+  filterProjects("developpement");
 }
 
 /* Fenêtres modales natives : Échap est géré par le navigateur. */
