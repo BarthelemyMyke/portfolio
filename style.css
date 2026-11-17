@@ -448,3 +448,10 @@ a:hover .arrow, button:hover .arrow { transform: translate(2px, -2px); }
 }
 .competences-coming-soon .page-heading { margin: 0; }
 .competences-coming-soon .page-title { max-width: 850px; font-size: clamp(2.9rem, 7vw, 6.2rem); }
+
+/* Lisibilité du texte de présentation sur la page À propos */
+.about-lead .page-heading .placeholder-copy {
+  font-size: clamp(1.08rem, 1.35vw, 1.17rem);
+  line-height: 1.8;
+  max-width: 65ch;
+}
