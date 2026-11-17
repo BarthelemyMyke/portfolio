@@ -34,7 +34,7 @@ if (projectFilters) {
       button.setAttribute("aria-pressed", String(button.dataset.filter === category));
     });
     projects.forEach((project) => {
-      project.hidden = project.dataset.category !== category;
+      project.hidden = category !== "tous" && project.dataset.category !== category;
     });
     if (emptyMessage) {
       emptyMessage.hidden = projects.some((project) => !project.hidden);
@@ -44,7 +44,7 @@ if (projectFilters) {
   filters.forEach((button) => {
     button.addEventListener("click", () => filterProjects(button.dataset.filter));
   });
-  filterProjects("developpement");
+  filterProjects("tous");
 }
 
 /* Fenêtres modales natives : Échap est géré par le navigateur. */
