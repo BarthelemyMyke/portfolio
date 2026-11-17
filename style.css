@@ -388,3 +388,53 @@ a:hover .arrow, button:hover .arrow { transform: translate(2px, -2px); }
   position: relative; width: min(85%, 320px); max-height: 84%;
   filter: drop-shadow(0 12px 18px rgba(0,0,0,.15));
 }
+
+/* Page Expériences : frise de formation inspirée du visuel fourni */
+.history-page { padding-bottom: clamp(3.5rem, 7vw, 6rem); }
+.history-heading { margin-bottom: clamp(2rem, 4vw, 3.2rem); }
+.history-heading .page-title { font-size: clamp(3.8rem, 7vw, 6.6rem); }
+.history-path {
+  list-style: none; display: grid; grid-template-columns: minmax(0,1fr) 66px minmax(0,1fr) 66px minmax(0,1fr);
+  gap: clamp(.55rem, 2vw, 1.7rem); align-items: start; margin: 0; padding: 0;
+}
+.history-step { min-width: 0; }
+.history-figure { display: flex; flex-direction: column; margin: 0; min-width: 0; height: 100%; }
+.history-image-wrap {
+  position: relative; aspect-ratio: 16/10; overflow: hidden; isolation: isolate;
+  border: 1px solid rgba(196,164,132,.36); border-radius: 11px 11px 0 0;
+  background: #143c32;
+}
+.history-image-wrap::after {
+  content: ""; position: absolute; inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(3,23,17,.48)); pointer-events: none;
+}
+.history-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.history-step:hover .history-image-wrap img { transform: scale(1.045); }
+.history-number {
+  position: absolute; z-index: 1; left: .8rem; bottom: .8rem;
+  color: #f5efe6; font: 600 .72rem/1.2 var(--mono); letter-spacing: .08em;
+}
+.history-label {
+  display: flex; flex: 1; flex-direction: column; gap: .45rem;
+  padding: clamp(1.1rem, 2vw, 1.65rem); background: var(--sand);
+  color: var(--ink-dark); border-radius: 0 0 11px 11px;
+}
+.history-label h2 { font: 400 clamp(1.65rem, 2.5vw, 2.45rem)/1.03 var(--serif); letter-spacing: -.02em; color: var(--ink-dark); }
+.history-label p { margin-top: auto; color: #315347; font-size: .85rem; font-weight: 600; }
+.history-connector { display: grid; align-self: start; justify-items: center; align-items: center; height: auto; aspect-ratio: 2/3; margin-top: clamp(1.4rem, 4vw, 3.7rem); color: var(--sand-light); }
+.history-connector svg { display: block; width: 85%; max-width: 68px; height: auto; filter: drop-shadow(0 0 12px rgba(196,164,132,.08)); }
+@media (max-width: 900px) {
+  .history-path { grid-template-columns: minmax(0,1fr); gap: 0; max-width: 580px; margin-inline: auto; }
+  .history-connector { height: 76px; aspect-ratio: auto; margin: 0; }
+  .history-connector svg { transform: rotate(90deg); width: 36px; }
+  .history-image-wrap { aspect-ratio: 16/9; }
+  .history-label { min-height: 110px; }
+}
+@media (max-width: 510px) {
+  .history-heading .page-title { font-size: clamp(3.2rem, 12vw, 4.5rem); }
+  .history-connector { height: 66px; }
+  .history-image-wrap { aspect-ratio: 4/3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .history-image-wrap img { transition: none; }
+}
